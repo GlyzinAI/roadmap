@@ -18,6 +18,7 @@ public class InMemoryBaseDao<T extends AbstractBaseEntity> {
     }
 
     public void delete(String entityName) {
+        Objects.requireNonNull(entityName, "entityName must not be null");
         map.remove(entityName);
     }
 
